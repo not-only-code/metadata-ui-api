@@ -77,30 +77,6 @@ class WP_Post_Meta_Box extends WP_Form_Object {
 }
 
 /**
- * Example Developer Usage
- */
-add_action( 'init', 'register_custom_fields_and_form_containers' );
-/**
- * Register custom fields and an example form contianer.
- */
-function register_custom_fields_and_form_containers() {
-	register_field( array(
-		'objects' => array( 'post', 'page' ),
-		'slug' => 'background_color',
-		'type' => 'color', // Relates to a pre-defined class.
-		'auth_callback' => 'callback_function',
-		'sanitization_callback' => 'sanitization_function',
-	) );
-
-	// Insantiate a container.
-	$container = new WP_Post_Meta_Box();
-
-	// Relate a registered field to the container.
-	$container->add_field( array( 'slug' => 'background_color' ) );
-
-}
-
-/**
  * Field registration.
  *
  * Abstracted from the UI view class, so that the field's business logic
@@ -133,3 +109,31 @@ function register_field( $args ) {
  * Relates to a field type.
  */
 class Input_Text extends Input {}
+
+
+
+
+
+/**
+ * Example Developer Usage
+ */
+add_action( 'init', 'register_custom_fields_and_form_containers' );
+/**
+ * Register custom fields and an example form contianer.
+ */
+function register_custom_fields_and_form_containers() {
+	register_field( array(
+		'objects' => array( 'post', 'page' ),
+		'slug' => 'background_color',
+		'type' => 'color', // Relates to a pre-defined class.
+		'auth_callback' => 'callback_function',
+		'sanitization_callback' => 'sanitization_function',
+	) );
+
+	// Insantiate a container.
+	$container = new WP_Post_Meta_Box();
+
+	// Relate a registered field to the container.
+	$container->add_field( array( 'slug' => 'background_color' ) );
+
+}
