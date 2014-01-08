@@ -76,9 +76,14 @@ class WP_Post_Meta_Box extends WP_Form_Object {
 	function get_fields() {}
 }
 
-add_action( 'init', 'register_custom_fields' );
-
-function register_custom_fields() {
+/**
+ * Example Developer Usage
+ */
+add_action( 'init', 'register_custom_fields_and_form_containers' );
+/**
+ * Register custom fields and an example form contianer.
+ */
+function register_custom_fields_and_form_containers() {
 	register_field( array(
 		'objects' => array( 'post', 'page' ),
 		'slug' => 'background_color',
@@ -86,6 +91,12 @@ function register_custom_fields() {
 		'auth_callback' => 'callback_function',
 		'sanitization_callback' => 'sanitization_function',
 	) );
+
+	// Insantiate a container.
+	$container = new WP_Post_Meta_Box();
+
+	// Relate a registered field to the container.
+	$container->add_field( array( 'slug' => 'background_color' ) );
 
 }
 
@@ -112,18 +123,6 @@ function register_field( $args ) {
 			// register_meta etc depending on object type...
 		}
 	}
-}
-
-add_action( 'init', 'register_form_containers' );
-/**
- * Register form contianer.
- */
-function register_form_containers() {
-	// Insantiate a container.
-	$container = new WP_Post_Meta_Box();
-
-	// Relate a registered field to the container.
-	$container->add_field( array( 'slug' => 'background_color' ) );
 }
 
 /**
