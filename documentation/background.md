@@ -6,7 +6,7 @@ Core's unopinionated respect towards metadata is actually good thing. It's opene
 
 ## Research
 
-To create something core-worthy, research into the architecture of these libraries is necessary, to take insight from their experiences, and find desirable architectural patterns for our needs.
+To take insight from these libraries, we researched their architecture to uncover desirable architectural patterns for a core-worthy plugin.
 
 ## Existing Post Meta Libraries
 
