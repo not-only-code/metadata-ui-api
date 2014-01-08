@@ -18,4 +18,4 @@ We also wrote up architectural overviews of these(time/effort permitting), so we
 
 Although this is a project by the Metadata component team originally scoped for creating a post metadata UI API, basically what we are creating is a form element-building API with a contextual form handler. A form handler has utility in other places in the administrative area, such as settings pages, taxonomy term metadata, Theme Customizer fields, etc. The form handler should be extensible and versatile enough to support any context, including a generic front-end form.
 
-To support related WP core APIs, we also endeavored a bit into architectural reviews of their APIs. [Settings API](wp-core-architecture-reviews/settings-api.php), Theme Customizer API(currently being written).
+To this end, we endeavored into architectural reviews of core APIs. See [Settings API](wp-core-architecture-reviews/settings-api.php), Theme Customizer API(currently being written).
