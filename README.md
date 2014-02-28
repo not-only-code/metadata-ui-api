@@ -1,9 +1,9 @@
 WordPress Metadata UI API
 =======================
 
-An API for building form UI for Wordpress content types(posts of all post types, taxonomy terms, Settings options, etc.).
+An API for building form UI for WordPress content types (post types, users, comments, Settings options, etc.).
 
-This is a project of the [WordPress core metadata team](http://make.wordpress.org/core/components/metadata/).
+This is a project of the [WordPress core metadata team](http://make.wordpress.org/core/components/options-meta/).
 
 ## Documentation
 
